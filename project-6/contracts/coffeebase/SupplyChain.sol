@@ -276,8 +276,10 @@ contract SupplyChain is FarmerRole, DistributorRole, RetailerRole {
     
     {
     // Update the appropriate fields
+    items[_upc].itemState = State.Shipped;
     
     // Emit the appropriate event
+    emit Shipped(_upc);
     
   }
 

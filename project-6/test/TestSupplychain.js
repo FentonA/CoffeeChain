@@ -62,8 +62,9 @@ contract('SupplyChain', function(accounts) {
         const resultBufferTwo = await supplyChain.fetchItemBufferTwo.call(upc)
 
         // Verify the result set
-        assert.equal(resultBufferOne[0], sku, 'Error: Invalid item SKU')
-        assert.equal(resultBufferOne[1], upc, 'Error: Invalid item UPC')
+        console.log(resultBufferOne);
+        assert.equal(resultBufferOne[0].toNumber(), sku, 'Error: Invalid item SKU')
+        assert.equal(resultBufferOne[1].toNumber(), upc, 'Error: Invalid item UPC')
         assert.equal(resultBufferOne[2], originFarmerID, 'Error: Missing or Invalid ownerID')
         assert.equal(resultBufferOne[3], originFarmerID, 'Error: Missing or Invalid originFarmerID')
         assert.equal(resultBufferOne[4], originFarmName, 'Error: Missing or Invalid originFarmName')

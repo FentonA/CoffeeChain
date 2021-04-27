@@ -237,6 +237,7 @@ contract("SupplyChain", function (accounts) {
   // 7th Test
   it("Testing smart contract function receiveItem() that allows a retailer to mark coffee received", async () => {
     const supplyChain = await SupplyChain.deployed();
+    await supplyChain.addRetailer(retailerID);
 
     // Declare and Initialize a variable for event
     var eventEmitted = false;

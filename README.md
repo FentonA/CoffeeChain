@@ -31,9 +31,9 @@ Below are the UML graphs that I created using drawio. You can find png / xml rep
 ### Sequence
 ![Sequence-Diagram](project-6/uml/Sequence.png)
 ### State
-![State-Diagram](project-6/uml/Sequence.png)
+![State-Diagram](project-6/uml/State.png)
 ### Class
-![Class-Diagram](project-6/uml/Sequence.png)
+![Class-Diagram](project-6/uml/Class.png)
 
 
 

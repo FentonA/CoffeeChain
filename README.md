@@ -1,110 +1,44 @@
-# Supply chain & data auditing
+# Project Writeup
 
-This repository containts an Ethereum DApp that demonstrates a Supply Chain flow between a Seller and Buyer. The user story is similar to any commonly used supply chain process. A Seller can add items to the inventory system stored in the blockchain. A Buyer can purchase such items from the inventory system. Additionally a Seller can mark an item as Shipped, and similarly a Buyer can mark an item as Received.
+## General
 
-The DApp User Interface when running should look like...
+### Contract Address
+Rinkeby-Contract-Address: [0x3D5DaDB0973cDFC249eA6a0534CbBf76dBC40EB5](https://rinkeby.etherscan.io/address/0x3D5DaDB0973cDFC249eA6a0534CbBf76dBC40EB5)
 
-![truffle test](images/ftc_product_overview.png)
+### Steps / Setup
+I had to do a few changes to the general setup to make the starter code for the frontend application work:
+1. Add `web3.min.js` file to the src/js directory
+2. Import `truffle-contract` directly using `require` instead of using the provided `truffle-contract.js` which did not work.
+3. To be able to use `require` I had to bundle my code using [broswerfy](http://browserify.org/) and source the bundled `src/js/bundle.js` instead of `app.js` directly.
 
-![truffle test](images/ftc_farm_details.png)
+With the above changes I was able to call all of the contract functions from the browser
 
-![truffle test](images/ftc_product_details.png)
+### Versions
+Truffle: v4.1.14 (core: 4.1.14)
+Solidity: v0.4.24 (solc-js)
+Node: v15.10.0
+NPM: 7.5.3
+Web3: 0.20.6
 
-![truffle test](images/ftc_transaction_history.png)
+## IPFS
+I did not use IPFS.
 
+## UML
+Below are the UML graphs that I created using drawio. You can find png / xml representations of these graphs in `project-6/uml`
 
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
-### Prerequisites
-
-Please make sure you've already installed ganache-cli, Truffle and enabled MetaMask extension in your browser.
-
-```
-Give examples (to be clarified)
-```
-
-### Installing
-
-A step by step series of examples that tell you have to get a development env running
-
-Clone this repository:
-
-```
-git clone https://github.com/udacity/nd1309/tree/master/course-5/project-6
-```
-
-Change directory to ```project-6``` folder and install all requisite npm packages (as listed in ```package.json```):
-
-```
-cd project-6
-npm install
-```
-
-Launch Ganache:
-
-```
-ganache-cli -m "spirit supply whale amount human item harsh scare congress discover talent hamster"
-```
-
-Your terminal should look something like this:
-
-![truffle test](images/ganache-cli.png)
-
-In a separate terminal window, Compile smart contracts:
-
-```
-truffle compile
-```
-
-Your terminal should look something like this:
-
-![truffle test](images/truffle_compile.png)
-
-This will create the smart contract artifacts in folder ```build\contracts```.
-
-Migrate smart contracts to the locally running blockchain, ganache-cli:
-
-```
-truffle migrate
-```
-
-Your terminal should look something like this:
-
-![truffle test](images/truffle_migrate.png)
-
-Test smart contracts:
-
-```
-truffle test
-```
-
-All 10 tests should pass.
-
-![truffle test](images/truffle_test.png)
-
-In a separate terminal window, launch the DApp:
-
-```
-npm run dev
-```
-
-## Built With
-
-* [Ethereum](https://www.ethereum.org/) - Ethereum is a decentralized platform that runs smart contracts
-* [IPFS](https://ipfs.io/) - IPFS is the Distributed Web | A peer-to-peer hypermedia protocol
-to make the web faster, safer, and more open.
-* [Truffle Framework](http://truffleframework.com/) - Truffle is the most popular development framework for Ethereum with a mission to make your life a whole lot easier.
+### Activity
+![Activity-Diagram](project-6/uml/Activity.png)
+### Sequence
+![Sequence-Diagram](project-6/uml/Sequence.png)
+### State
+![State-Diagram](project-6/uml/Sequence.png)
+### Class
+![Class-Diagram](project-6/uml/Sequence.png)
 
 
-## Authors
 
-See also the list of [contributors](https://github.com/your/project/contributors.md) who participated in this project.
 
-## Acknowledgments
 
-* Solidity
-* Ganache-cli
-* Truffle
-* IPFS
+
+
+

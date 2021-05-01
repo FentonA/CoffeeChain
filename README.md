@@ -11,7 +11,7 @@ I had to do a few changes to the general setup to make the starter code for the 
 2. Import `truffle-contract` directly using `require` instead of using the provided `truffle-contract.js` which did not work.
 3. To be able to use `require` I had to bundle my code using [broswerfy](http://browserify.org/) and source the bundled `src/js/bundle.js` instead of `app.js` directly.
 
-With the above changes I was able to call all of the contract functions from the browser
+With the above changes I was able to run the app wiht `npm run dev` and call all of the contract functions from the browser using the provided buttons.
 
 ### Versions
 - Truffle: v4.1.14 (core: 4.1.14)

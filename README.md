@@ -14,11 +14,11 @@ I had to do a few changes to the general setup to make the starter code for the 
 With the above changes I was able to call all of the contract functions from the browser
 
 ### Versions
-Truffle: v4.1.14 (core: 4.1.14)
-Solidity: v0.4.24 (solc-js)
-Node: v15.10.0
-NPM: 7.5.3
-Web3: 0.20.6
+- Truffle: v4.1.14 (core: 4.1.14)
+- Solidity: v0.4.24 (solc-js)
+- Node: v15.10.0
+- NPM: 7.5.3
+- Web3: 0.20.6
 
 ## IPFS
 I did not use IPFS.
